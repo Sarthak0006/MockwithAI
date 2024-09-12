@@ -1,0 +1,41 @@
+# Node modules (pnpm)
+node_modules/
+.pnpm/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production
+.env.test
+
+# Build output
+dist/
+build/
+
+# TypeScript cache and build info
+*.tsbuildinfo
+
+# MacOS files
+.DS_Store
+
+# IDE settings
+.vscode/
+.idea/
+
+# Coverage
+coverage/
+
+# Other pnpm files
+.pnpm-debug.log
+.pnpm-store/
+
+# Lock file (pnpm)
+pnpm-lock.yaml
