@@ -1,8 +1,11 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 
 const AudioRecorder: React.FC = () => {
   const [permission, setPermission] = useState<boolean>(false);
   const [stream, setStream] = useState<MediaStream | null>(null);
+
+  console.log(stream);
+  
 
   const getMicrophonePermission = async () => {
     if ("MediaRecorder" in window) {
