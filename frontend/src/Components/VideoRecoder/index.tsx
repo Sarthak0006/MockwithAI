@@ -1,15 +1,17 @@
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from 'react';
 
-const VideoRecorder: React.FC = () => {
+interface VideoRecorderProps {}
+
+const VideoRecorder: React.FC<VideoRecorderProps> = () => {
   const [permission, setPermission] = useState<boolean>(false);
   const [stream, setStream] = useState<MediaStream | null>(null);
   const [recording, setRecording] = useState<boolean>(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   const getCameraPermission = async () => {
-    if ("MediaRecorder" in window) {
+    if ('MediaRecorder' in window) {
       try {
-        const streamData = await navigator.mediaDevices.getUserMedia({
+        const streamData: MediaStream = await navigator.mediaDevices.getUserMedia({
           audio: true,
           video: true,
         });
@@ -19,7 +21,7 @@ const VideoRecorder: React.FC = () => {
         alert(err.message);
       }
     } else {
-      alert("The MediaRecorder API is not supported in your browser.");
+      alert('The MediaRecorder API is not supported in your browser.');
     }
   };
 
@@ -33,7 +35,7 @@ const VideoRecorder: React.FC = () => {
       };
 
       mediaRecorder.onstop = () => {
-        const recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
+        const recordedBlob = new Blob(recordedChunks, { type: 'video/webm' });
         const recordedVideoUrl = URL.createObjectURL(recordedBlob);
         // Do something with the recorded video (e.g., upload to server or download)
         console.log(recordedVideoUrl);
@@ -66,7 +68,10 @@ const VideoRecorder: React.FC = () => {
           playsInline
           width="640"
           height="480"
-          style={{ display: permission ? "block" : "none" }}
+          style={{
+            transform: 'scaleX(-1)',
+            display: permission ? 'block' : 'none',
+          }}
         />
         <div className="video-controls">
           {!permission ? (
