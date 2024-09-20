@@ -1,10 +1,13 @@
 import React from "react";
-// import style from "./style.module.css";
+import VideoRecorder from "../../Components/VideoRecoder";
+import AudioRecorder from "../../Components/AudioRecorder";
+import style from "./style.module.css";
 
 const Index:React.FC = () => {
     return (
-        <div>
-            <h1>Interview</h1>
+        <div className={style.interview}>
+            <VideoRecorder />
+            <AudioRecorder />
         </div>
     );
 };

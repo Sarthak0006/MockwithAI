@@ -1,0 +1,9 @@
+.login_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    margin: auto;
+    width: 10vw;
+    margin-top: 25vh;
+}

@@ -1,6 +1,8 @@
-.heading {
-    color: black;
+.header {
+    color: white;
     font-size: 2.5rem;
     font-weight: 700;
-    text-align: center
+    text-align: center;
+    width: 100%;
+    background-color: black;
 }
