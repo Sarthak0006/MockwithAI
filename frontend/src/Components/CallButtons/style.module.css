@@ -1,0 +1,13 @@
+.button_container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+.button_container button {
+    border-radius: 100%;
+    background-color: red; 
+    border: none;
+    padding: 10px;
+    margin: 0 1vw;
+}

@@ -13,8 +13,8 @@ const App:React.FC = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
-        <Route path="singup" element={<SingUp />} />
-        <Route path="interview" element={<Interview />} />
+        <Route path="/singup" element={<SingUp />} />
+        <Route path="/interview" element={<Interview />} />
       </Routes>
     </Router>
   )
