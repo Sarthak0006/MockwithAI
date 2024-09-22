@@ -1,6 +1,6 @@
 .button_container {
     display: flex;
-    margin: auto;
+    margin-top: 15vh;
     justify-content: center;
 }
 
