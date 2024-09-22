@@ -4,7 +4,7 @@ import React from "react";
 const Index:React.FC = () => {
     return (
         <div>
-            <h1>Sing-up</h1>
+            <h1>Sign-up</h1>
         </div>
     );
 };

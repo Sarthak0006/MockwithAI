@@ -12,7 +12,7 @@ const VideoRecorder: React.FC<VideoRecorderProps> = () => {
     if ('MediaRecorder' in window) {
       try {
         const streamData: MediaStream = await navigator.mediaDevices.getUserMedia({
-          audio: true,
+          audio: false,
           video: true,
         });
         setPermission(true);

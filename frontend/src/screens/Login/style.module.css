@@ -1,9 +1,64 @@
 .login_container {
+    position: relative; /* Ensure the container can position the video correctly */
+    overflow: hidden;  /* Prevent overflow if needed */
+    width: 100vw;      /* Full width */
+    height: 100vh;     /* Full height */
+    background-image: radial-gradient( circle farthest-corner at -8.9% 51.2%,  rgba(255,124,0,1) 0%, rgba(255,124,0,1) 15.9%, rgba(255,163,77,1) 15.9%, rgba(255,163,77,1) 24.4%, rgb(18, 28, 34) 24.5%, rgb(38, 54, 65) 66% );
+}
+
+.login {
+    position: absolute;
+    top: 20%;
+    left: 30vw;
+    right: 30vw;
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
     display: flex;
-    justify-content: center;
+    width: 40vw;
+    border: none;
+    box-shadow: 0px 0px 20px 1px rgba(51, 48, 48, 0.541);
+    border-radius: 20px;
+    padding: 20px;
+    justify-content: center;    
     align-items: center;
-    border: 1px solid black;
-    margin: auto;
-    width: 10vw;
-    margin-top: 25vh;
+    background-color: #ffffffbb;      
+    display: flex;
+    flex-direction: column;
+    font-size: medium;
+    font-weight: normal;
+}
+
+.login input {
+    margin: 10px 0;
+    padding: 15px;
+    border: none;
+    background-color: rgb(43, 43, 43);
+    border-radius: 20px;
+    width: 60%;
+    color: white;
+    
+}
+
+.login input::placeholder {
+    color: white;
+}
+
+.continue {
+    background-image: linear-gradient( 93.2deg,  rgba(24,95,246,1) 14.4%, rgba(27,69,166,1) 90.8% );
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: large;
+}
+
+.signup {   
+    display: flex;
+}
+
+.signup a {
+    padding: 15px;
 }
