@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import style from "./style.module.css";
 
 const Index: React.FC = () => {
@@ -17,7 +18,7 @@ const Index: React.FC = () => {
         <button className={style.continue}>Continue</button>
         <div className={style.signup}>
           <h5>Don't have an account?</h5>
-          <a href="/signup">Sign Up</a>
+          <Link to="/signup">Sign Up</Link>
         </div>
       </div>
     </div>
