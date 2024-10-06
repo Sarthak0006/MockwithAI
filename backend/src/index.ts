@@ -1,9 +1,13 @@
-import express from 'express';
+import express, { Request, Response } from 'express';
+import config from '../config';
+import interviewer from './LLM/gemini';
 
-const app = express();
-const port = 4000;
+interviewer("React is a javascript library.");
 
-app.get('/', (req, res) => {
+const app: express.Application = express();
+const port: number = config.PORT;
+
+app.get('/', (req: Request, res: Response) => {
   res.send('Hello, world!');
 });
 
